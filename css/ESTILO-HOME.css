@@ -1,0 +1,155 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 60px;
+
+}
+
+.logo {
+
+    width: 180px;
+
+}
+
+nav ul {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 35px;
+
+}
+
+nav a {
+
+    text-decoration: none;
+
+    color: #143F6B;
+
+    font-weight: bold;
+
+}
+
+/* Código que você já tinha */
+.hero {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
+
+}
+
+.texto,
+.imagem {
+    width: 45%;
+}
+
+.imagem img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 35px;
+    margin-bottom: 35px;
+}
+
+button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* --- NOVO ESTILO PARA O TEXTO EM DESENVOLVIMENTO --- */
+.projeto-info {
+    background-color: #0056b3;
+    /* Cor de fundo azul */
+    color: white;
+    /* Texto branco para dar contraste */
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 40px;
+    display: none;
+    /* Começa escondido */
+}
+
+/* Classe que o JavaScript vai colocar para ativar a animação */
+.projeto-info.mostrar {
+    display: block;
+    animation: aparecerSuave 0.5s ease-out forwards;
+}
+
+/* Regra da animação (Fade-in + Deslocamento) */
+@keyframes aparecerSuave {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        /* Começa um pouco mais abaixo */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* Termina na posição original */
+    }
+}
+
+@media (max-width:768px) {
+
+    header {
+
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+
+    }
+
+    nav ul {
+
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .hero {
+
+        flex-direction: column;
+        padding: 30px 20px;
+
+    }
+
+    .texto,
+    .imagem {
+
+        width: 100%;
+
+    }
+
+    h1 {
+
+        font-size: 35px;
+
+    }
+
+}
